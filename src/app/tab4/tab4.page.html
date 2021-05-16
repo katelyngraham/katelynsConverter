@@ -1,0 +1,39 @@
+<br><br><br><br><br><br>
+<ion-toolbar>
+  <ion-title size="large" text="large" class="ion-text-center">
+    Rate Table
+  </ion-title>
+</ion-toolbar>
+<br><br><br>
+<ion-content [fullscreen]="true" class="ion-text-center ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>Today's Rates</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <table>
+          <tr>
+            <td>
+              From
+            </td>
+            <td>
+              To
+            </td>
+            <td>
+              Rate
+            </td>
+          </tr>
+          <tr *ngFor="let rate of rates; let even = even; let odd = odd" [ngClass]="{ odd: odd, even: even }">
+            <td>{{rate.from}}</td>
+            <td>{{rate.to}}</td>
+            <td>{{rate.rate}}</td>
+          </tr>
+        </table>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
