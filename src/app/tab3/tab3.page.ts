@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController} from '@ionic/angular';
-import { HttpClient } from '@angular/common/http';
+import { NavigationExtras, Router } from '@angular/router';
+//import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab3',
@@ -14,7 +15,7 @@ export class Tab3Page {
   warning="";
   rates;
   
-  constructor(public navCtrl: NavController) 
+  constructor(public navCtrl: NavController, private router:Router) 
   {
     this.loadRates();
   }
@@ -37,8 +38,16 @@ export class Tab3Page {
     var convertedAmount = rate * this.amount;
     console.log("converted amount = " + convertedAmount);
     
-    
-    this.navCtrl.navigateForward('/tabs/tab2?amount=' + convertedAmount);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        amount: convertedAmount, 
+        rate: rate,
+        from: this.from,
+        to: this.to
+      }
+    };
+    this.router.navigate(['/tabs/tab2'], navigationExtras);
+    //this.navCtrl.navigateForward('/tabs/tab2?amount=' + convertedAmount);
   
   }
   loadRates(): any {
