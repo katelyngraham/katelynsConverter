@@ -1,12 +1,18 @@
-<br><br><br><br><br><br>
-
+<!--Results Page  
+    Title Converted Amount
+    print previous currency
+    print the rate 
+    print exchange and the currency
+    button that brings you back to the currency converter-->
+<br><br><br><br><br><br><br><br><br><br>
 <ion-content [fullscreen]="true" class="ion-text-center ion-padding">
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-title size="medium"  text="large" class="ion-text-center">Converted Amount</ion-title>
+        <ion-title size="large"  text="large" class="ion-text-center">Converted <br> Amount</ion-title>
       </ion-col>
     </ion-row>
+    <br><br><br>
     <ion-row class="ion-padding">
       <ion-col >
         From: {{from}}
@@ -17,9 +23,10 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-label size="large" text="large" class="ion-text-center currencyResult"> {{result}} {{}} </ion-label>
+        <ion-label size="large" text="large" class="ion-text-center currencyResult"> {{result}} {{to}} </ion-label>
       </ion-col>
     </ion-row>
+    <br><br><br>
     <ion-row>
       <ion-col>
         <ion-button expand="block" color="secondary" size="large" (click)="back()">Tap Here Convert More</ion-button>

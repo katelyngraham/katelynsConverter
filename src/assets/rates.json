@@ -1,25 +1,25 @@
 {
     "euro": {
-        "usd": 1.1,
-        "sterling": 0.85,
-        "aud": 1.4
+        "usd": 1.21,
+        "sterling": 0.86,
+        "aud": 1.56
     },
 
     "usd": {
-        "euro": 0.9,
-        "sterling": 1.5,
-        "aud": 1.7
+        "euro": 0.82,
+        "sterling": 0.71,
+        "aud": 1.28
     },
 
     "sterling": {
-        "euro": 1.2,
-        "usd": 0.8,
-        "aud": 1.4
+        "euro": 1.16,
+        "usd": 1.41,
+        "aud": 1.81
     },
 
     "aud": {
-        "euro": 0.6,
-        "usd": 0.3,
-        "sterling": 0.8
+        "euro": 0.64,
+        "usd": 0.78,
+        "sterling": 0.55
     }
 }

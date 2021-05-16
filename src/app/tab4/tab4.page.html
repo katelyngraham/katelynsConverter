@@ -1,3 +1,7 @@
+<!--Shows Todays Rates 
+    Prints from currencies
+    Prints to currencies
+    Prints rates-->
 <br><br><br><br><br><br>
 <ion-toolbar>
   <ion-title size="large" text="large" class="ion-text-center">
@@ -17,23 +21,22 @@
         <table>
           <tr>
             <td>
-              From
+              <u><b>From</b></u>
             </td>
             <td>
-              To
+              <u><b>To</b></u>
             </td>
             <td>
-              Rate
+              <u><b>Rate</b></u>
             </td>
           </tr>
           <tr *ngFor="let rate of rates; let even = even; let odd = odd" [ngClass]="{ odd: odd, even: even }">
-            <td>{{rate.from}}</td>
-            <td>{{rate.to}}</td>
-            <td>{{rate.rate}}</td>
+            <td class="ion-padding-horizontal">{{rate.from}}</td>
+            <td class="ion-padding-horizontal">{{rate.to}}</td>
+            <td class="ion-padding-horizontal">{{rate.rate}}</td>
           </tr>
         </table>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 </ion-content>

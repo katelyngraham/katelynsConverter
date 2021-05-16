@@ -26,7 +26,7 @@ export class Tab3Page {
     console.log("from = " + this.from);
     console.log("to = " + this.to);
 
-    this.warning=this.from + " " + this.to;
+    //this.warning=this.from + " " + this.to;
     if (this.from == this.to)
     {
       this.warning="Cannot have same from and to currency";
