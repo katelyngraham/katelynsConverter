@@ -1,17 +1,67 @@
-<ion-header [translucent]="true">
+<br><br><br><br><br><br>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title size="large"  text="large" class="ion-text-center">
+      Converter
     </ion-title>
   </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<br><br><br>
+<ion-content [fullscreen]="true" class="ion-text-center ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>Enter amount to be converted</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input class="currency" value="{{amount}}" required placeholder="tap to enter currency"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          Select currency to convert from
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <ion-select okText="Okay" cancelText="Dismiss"
+          [(ngModel)]="from" name="from" >
+            <ion-select-option value="euro">Euro</ion-select-option>
+            <ion-select-option value="usd">USD</ion-select-option>
+            <ion-select-option value="sterling">Sterling</ion-select-option>
+            <ion-select-option value="aud">AUD</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <ion-label>
+              Select currency to convert to
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <ion-select okText="Okay" cancelText="Dismiss"  [(ngModel)]="to" name="to">
+                <ion-select-option value="euro">Euro</ion-select-option>
+                <ion-select-option value="usd">USD</ion-select-option>
+                <ion-select-option value="sterling">Sterling</ion-select-option>
+                <ion-select-option value="aud">AUD</ion-select-option>
+              </ion-select>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button expand="block" color="secondary" size="large" 
+              (click)="convert()">Convert</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="warning">{{warning}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 </ion-content>

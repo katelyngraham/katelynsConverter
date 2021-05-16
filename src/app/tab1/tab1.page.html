@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
+<br><br><br><br><br><br>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title size="large"  text="large" class="ion-text-center">
+      Currency Converter
     </ion-title>
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="ion-justify-content-evenly" class="ion-text-center ion-padding">
+  <ion-grid>
+    <h1>Welcome</h1>
+  </ion-grid>
+  <br><br><br>
+  <ion-grid>
+    <h3>Get the latest currency conversions in realtime on the go</h3>
+  </ion-grid>
+  <br><br><br>
+  <ion-button expand="block" color="secondary" size="large" 
+  (click)="nextPage()">Tap Here to Start</ion-button>
+
 </ion-content>
+
